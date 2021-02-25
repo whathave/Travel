@@ -8,6 +8,18 @@
     "prd": "pm2 start bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "routes/**": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "debug": "^4.1.1",
     "koa": "^2.7.0",
@@ -26,6 +38,10 @@
     "sequelize": "^5.22.3"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "eslint": "^7.20.0",
+    "husky": "^5.1.1",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^1.19.1",
+    "prettier": "^2.2.1"
   }
 }
