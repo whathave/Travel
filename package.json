@@ -14,11 +14,7 @@
     }
   },
   "lint-staged": {
-    "routes/**": [
-      "prettier --config .prettierrc --write",
-      "eslint --fix",
-      "git add"
-    ]
+    "**/*.js": "eslint --ext .js"
   },
   "dependencies": {
     "debug": "^4.1.1",
