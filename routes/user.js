@@ -2,7 +2,7 @@ const router = require('koa-router')()
 // 学生
 const UserController = require('../controllers/user');
 
-router.prefix('/user');;
+router.prefix('/user');;;
 /**
  * 学生接口
  */
